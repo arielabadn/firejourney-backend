@@ -28,6 +28,6 @@ app.use(passport.session());
 app.use("/auth", authRoute);
 app.use("/dashboard", dashboardRoute);
 
-app.listen("5000", ()=>{
-    console.log("server is running in port 5000!")
+app.listen("3000", ()=>{
+    console.log("server is running in port 3000!")
 })
