@@ -5,7 +5,7 @@ const pool = new Pool({
   host: "localhost",
   database: "firejourney",
   password: process.env.DB_PASSWORD,
-  port: 5433
+  port: 5432
 });
 
 //get user from database
