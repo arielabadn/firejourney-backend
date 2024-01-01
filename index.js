@@ -8,7 +8,7 @@ const passport = require("passport");
 const authRoute = require("./routes/auth");
 const dashboardRoute = require("./routes/dashboard");
 const app = express();
-const nodemailerRoute = require("./nodemailer");
+const nodemailerRoute = require("./routes/nodemailer");
 
 app.use(cors({
   origin: "http://localhost:5173",
