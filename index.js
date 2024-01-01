@@ -8,6 +8,7 @@ const passport = require("passport");
 const authRoute = require("./routes/auth");
 const dashboardRoute = require("./routes/dashboard");
 const app = express();
+const nodemailerRoute = require("./nodemailer");
 
 app.use(cors({
   origin: "http://localhost:5173",
@@ -27,6 +28,7 @@ app.use(passport.session());
 
 app.use("/auth", authRoute);
 app.use("/dashboard", dashboardRoute);
+app.use("/nodemailer", nodemailerRoute);
 
 app.listen("3000", ()=>{
     console.log("server is running in port 3000!")
