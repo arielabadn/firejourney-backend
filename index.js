@@ -10,8 +10,11 @@ const dashboardRoute = require("./routes/dashboard");
 const app = express();
 const nodemailerRoute = require("./routes/nodemailer");
 
+const port = process.env.PORT || 3000;
+const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
+
 app.use(cors({
-  origin: "http://localhost:5173",
+  origin: CLIENT_URL,
   methods: "GET,POST,PUT,DELETE",
   credentials: true,
 }));
@@ -30,6 +33,6 @@ app.use("/auth", authRoute);
 app.use("/dashboard", dashboardRoute);
 app.use("/nodemailer", nodemailerRoute);
 
-app.listen("3000", ()=>{
-    console.log("server is running in port 3000!")
+app.listen(port, ()=>{
+    console.log(`server is running in port ${port}!`)
 })
