@@ -35,6 +35,7 @@ router.post("/send", function (req, res) {
       subject: `${req.body.mailerState.subject}`,
       text: `${req.body.mailerState.message}`,
     };
+    console.log(req.body.mailerState);
 
   transporter.sendMail(mailOptions, function (err, data) {
     if (err) {

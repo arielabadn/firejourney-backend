@@ -13,6 +13,7 @@ const nodemailerRoute = require("./routes/nodemailer");
 const port = process.env.PORT || 3000;
 const CLIENT_URL = process.env.CLIENT_URL || "http://localhost:5173";
 
+app.use(express.json());
 app.use(cors({
   origin: CLIENT_URL,
   methods: "GET,POST,PUT,DELETE",
